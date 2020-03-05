@@ -1,0 +1,10 @@
+com\an\ego\rpc\service\impl\TbContentCateGoryServiceImpl.class
+com\an\ego\rpc\service\impl\TbContentServiceImpl.class
+com\an\ego\test\ProviderTest.class
+com\an\ego\rpc\service\impl\TbUserServiceImpl.class
+com\an\ego\rpc\service\impl\TbOrderServiceImpl.class
+com\an\ego\rpc\service\impl\ParamItemServiceImpl.class
+com\an\ego\rpc\service\impl\ItemParamServiceImpl.class
+com\an\ego\rpc\service\impl\ItemCatServiceImpl.class
+com\an\ego\rpc\service\impl\ItemServiceImpl.class
+com\an\ego\rpc\service\impl\ItemDescServiceImpl.class

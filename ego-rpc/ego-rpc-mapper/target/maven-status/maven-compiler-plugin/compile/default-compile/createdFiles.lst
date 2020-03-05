@@ -1,0 +1,11 @@
+com\an\ego\rpc\mapper\TbUserMapper.class
+com\an\ego\rpc\mapper\TbItemCatMapper.class
+com\an\ego\rpc\mapper\TbItemDescMapper.class
+com\an\ego\rpc\mapper\TbOrderShippingMapper.class
+com\an\ego\rpc\mapper\TbOrderItemMapper.class
+com\an\ego\rpc\mapper\TbItemParamMapper.class
+com\an\ego\rpc\mapper\TbContentCategoryMapper.class
+com\an\ego\rpc\mapper\TbContentMapper.class
+com\an\ego\rpc\mapper\TbOrderMapper.class
+com\an\ego\rpc\mapper\TbItemMapper.class
+com\an\ego\rpc\mapper\TbItemParamItemMapper.class

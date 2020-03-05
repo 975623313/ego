@@ -1,0 +1,4 @@
+com\an\ego\sso\controller\PageController.class
+com\an\ego\sso\controller\SsoUserController.class
+com\an\ego\sso\service\SsoUserService.class
+com\an\ego\sso\service\impl\SsoUserServiceImpl.class

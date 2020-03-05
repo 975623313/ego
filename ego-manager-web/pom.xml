@@ -1,0 +1,95 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.an.ego</groupId>
+		<artifactId>ego</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>ego-manager-web</artifactId>
+	<packaging>war</packaging>
+
+	<dependencies>
+		<dependency>
+<groupId>com.an.ego.rpc.service</groupId>
+  <artifactId>ego-rpc-service</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		  	<!-- dubbo依赖 -->
+      <dependency>
+         <groupId>com.alibaba</groupId>
+         <artifactId>dubbo</artifactId>
+      </dependency>
+      <!-- zookeeper客户端依赖 -->
+      <dependency>
+         <groupId>com.101tec</groupId>
+         <artifactId>zkclient</artifactId>
+      </dependency>
+      <!-- spring依赖 -->
+      <dependency>
+         <groupId>org.springframework</groupId>
+         <artifactId>spring-context</artifactId>
+      </dependency>
+      <dependency>
+         <groupId>org.springframework</groupId>
+         <artifactId>spring-webmvc</artifactId>
+      </dependency>
+      <!-- JSP相关 -->
+      <dependency>
+         <groupId>jstl</groupId>
+         <artifactId>jstl</artifactId>
+      </dependency>
+      <dependency>
+         <groupId>javax.servlet</groupId>
+         <artifactId>servlet-api</artifactId>
+         <scope>provided</scope>
+      </dependency>
+      <dependency>
+         <groupId>javax.servlet</groupId>
+         <artifactId>jsp-api</artifactId>
+         <scope>provided</scope>
+      </dependency>
+      <!-- json到java对象的序列化和反序列化 -->
+      <dependency>
+         <groupId>com.fasterxml.jackson.core</groupId>
+         <artifactId>jackson-databind</artifactId>
+      </dependency>
+      <!-- 处理图片上传的 -->
+      <dependency>
+         <groupId>commons-fileupload</groupId>
+         <artifactId>commons-fileupload</artifactId>
+      </dependency>
+      <dependency>
+         <groupId>com.github.pagehelper</groupId>
+         <artifactId>pagehelper</artifactId>
+      </dependency>
+  	
+  </dependencies>
+  
+  <build>
+      <plugins>
+         <!-- 配置Tomcat插件 -->
+         <plugin>
+            <groupId>org.apache.tomcat.maven</groupId>
+            <artifactId>tomcat7-maven-plugin</artifactId>
+            <configuration>
+           	   <!-- 不需要上下文  http://localhost:8080/xxx.jsp -->
+               <path>/</path>
+               <port>8080</port>
+            </configuration>
+         </plugin>
+      </plugins>
+   </build>
+	
+
+
+
+
+
+
+
+
+
+
+
+</project>

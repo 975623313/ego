@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        ">
+    <!-- 加载cache.properties  -->
+    <context:property-placeholder location="classpath:cache.properties"/>
+	<!-- 实例化JedisCluster -->
+	<bean id="cluster" class="redis.clients.jedis.JedisCluster">
+		<constructor-arg name="nodes">
+			<set>
+				<bean class="redis.clients.jedis.HostAndPort">
+					<constructor-arg name="host" value="192.168.142.7"></constructor-arg>
+					<constructor-arg name="port" value="6380"></constructor-arg>
+				</bean>
+				<bean class="redis.clients.jedis.HostAndPort">
+					<constructor-arg name="host" value="192.168.142.7"></constructor-arg>
+					<constructor-arg name="port" value="6381"></constructor-arg>
+				</bean>
+				<bean class="redis.clients.jedis.HostAndPort">
+					<constructor-arg name="host" value="192.168.142.7"></constructor-arg>
+					<constructor-arg name="port" value="6382"></constructor-arg>
+				</bean>
+				<bean class="redis.clients.jedis.HostAndPort">
+					<constructor-arg name="host" value="192.168.142.7"></constructor-arg>
+					<constructor-arg name="port" value="6383"></constructor-arg>
+				</bean>
+				<bean class="redis.clients.jedis.HostAndPort">
+					<constructor-arg name="host" value="192.168.142.7"></constructor-arg>
+					<constructor-arg name="port" value="6384"></constructor-arg>
+				</bean>
+				<bean class="redis.clients.jedis.HostAndPort">
+					<constructor-arg name="host" value="192.168.142.7"></constructor-arg>
+					<constructor-arg name="port" value="6385"></constructor-arg>
+				</bean>
+			</set>
+		</constructor-arg>
+	</bean>
+</beans>

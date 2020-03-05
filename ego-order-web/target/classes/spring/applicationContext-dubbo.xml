@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo 
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+	<!-- 添加服务消费者的标志 -->
+	<dubbo:application name="ego-order-web-consumer" />
+	<!-- 指定注册中心 -->
+	<dubbo:registry
+		address="192.168.142.5:2182,192.168.142.5:2181,192.168.142.5:2183"
+		protocol="zookeeper" />
+
+	<!-- spring容器中存在一个远程服务的代理对象 -->
+	<!-- <dubbo:reference interface="com.an.ego.rpc.service.ItemCatService" 
+		id="itemCatServiceProxy"></dubbo:reference> <dubbo:reference interface="com.an.ego.rpc.service.TbContentService" 
+		id="tbContentServiceProxy"></dubbo:reference> -->
+	<!-- <dubbo:reference interface="com.an.ego.rpc.service.ItemService" id="itemServiceProxy"></dubbo:reference> -->
+
+	<!-- spring 容器中存在一个远程服务的代理对象 -->
+	<dubbo:reference interface="com.an.ego.rpc.service.TbOrderService"
+		id="tbOrderServiceProxy"></dubbo:reference>
+</beans>
