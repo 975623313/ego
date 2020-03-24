@@ -9,6 +9,8 @@ public class PageController {
 
 	@RequestMapping("/{url}")
 	public String loadPage(@PathVariable String url){
+		System.out.println("urlllllllllll"+url);
+
 		return url;
 	}
 }

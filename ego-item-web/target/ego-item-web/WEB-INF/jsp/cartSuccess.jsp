@@ -48,7 +48,7 @@
 						<span id="flashBuy" style="display: none">商品数量有限，请您尽快下单并付款！</span>
 					</div>
 					<span id="initCart_next_go"> <a class="btn-1"
-						href="/cart/cart.html"
+						href="http://localhost:8084/cart/cart.html"
 						id="GotoShoppingCart">去购物车结算</a> <span class="ml10">您还可以 <a
 							class="ftx-05" href="http://localhost:8081">继续购物</a></span>
 					</span>

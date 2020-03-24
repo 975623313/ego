@@ -20,6 +20,7 @@ public class SearchItemDescController {
 	@RequestMapping("/item/desc/{id}")
 	@ResponseBody
 	public String loadItemDesc(@PathVariable Long id) {
+
 		return searchItemDescService.loadItemDescService(id);
 	}
 }

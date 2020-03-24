@@ -25,13 +25,8 @@ public class FtpUtils {
 		InputStream local=new FileInputStream("D:/pic/123.jpg");
 		uploadFile(hostname, port, username, password, pathname, remote,local);
 	}
-    public static boolean uploadFile(String hostname,
-                                     int port, String username,
-                                     String password, String pathname,
-                                     String remote,InputStream local) {
-
+    public static boolean uploadFile(String hostname, int port, String username, String password, String pathname, String remote,InputStream local) {
         boolean flag=false;
-
         try{
             //创建FtpClient对象
             FTPClient client=new FTPClient();
@@ -47,24 +42,16 @@ public class FtpUtils {
                     client.changeWorkingDirectory(pathname);
                 }
             }
-
-//            local=new FileInputStream("D:/pic/1.jpg");
             //实现文件上传
             client.storeFile(remote, local);
-
             local.close();
-
             client.logout();
             client.disconnect();
             flag=true;
-
         }catch(Exception ex){
             ex.printStackTrace();
         }
-
         return flag;
-
-
     }}
 //    public static boolean uploadFile(String hostname,
 //                                     int port, String username,

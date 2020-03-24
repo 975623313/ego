@@ -1,8 +1,10 @@
  
 function login() {
+
     return location.href = "http://localhost:8083/login";
 }
 function regist() {
+
     return location.href = "http://localhost:8083/register";
 }
 function createCookie(a, b, c, d) {

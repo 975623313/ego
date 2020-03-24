@@ -17,7 +17,6 @@ public class PortalContentController {
 	@RequestMapping(value="/content/index/list",produces=MediaType.TEXT_HTML_VALUE+";charset=UTF-8")
 	@ResponseBody
 	public String contentIndexList(Long categoryId){
-		System.out.println(categoryId+"!!!!!!!!!!!!!!!!!!!!");
 		return portalContentService.loadContentListByCidService(categoryId);
 	}
 

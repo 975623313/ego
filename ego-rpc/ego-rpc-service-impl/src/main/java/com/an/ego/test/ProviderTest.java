@@ -5,7 +5,6 @@ import java.io.IOException;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class ProviderTest {
-
 	public static void main(String[] args) {
 		/*
 		 * 加载spring容器，发布服务
@@ -21,10 +20,7 @@ public class ProviderTest {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
 		content.stop();
-	
-		
 	}
 	
 	

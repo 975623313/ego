@@ -14,7 +14,6 @@ var TT = TAOTAO = {
 
 					if(data.status == 200){
 						var username= JSON.parse(data.data).username;
-						// var username = data.data.username;
 						var html = username + "，欢迎来到淘淘！" +
 								"<a href=\"javascript:TT.logout()\" " +
 								"class=\"link-logout\">[退出]</a>";

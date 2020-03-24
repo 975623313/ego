@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class PageController {
 	@RequestMapping("/{url}")
 	public String loadPage(@PathVariable String url){
+		System.out.println("8081:----"+url);
+
 		return url;
 	}
 }

@@ -16,17 +16,14 @@ import com.an.ego.rpc.pojo.TbUser;
 
 @Controller
 public class CarItemController {
-
 	@Autowired
 	private CarItemService carItemService;
-
 	@RequestMapping("/cart/add/{itemid}")
 	public String cartAdd(@PathVariable Long itemid, HttpServletRequest request) {
 		TbUser user = (TbUser) request.getAttribute("user");
 		carItemService.addItemToCarService(itemid, user.getId());
 		return "cartSuccess";
 	}
-
 	@RequestMapping("/cart/cart")
 	public String loadCarItemList(HttpServletRequest request) {
 		TbUser user = (TbUser) request.getAttribute("user");
@@ -35,16 +32,13 @@ public class CarItemController {
 		request.setAttribute("carMap", carMap);
 		return "cart";
 	}
-
 	@RequestMapping("/cart/update/num/{itemid}/{num}")
 	@ResponseBody
 	public String cartUpdateNum(@PathVariable Long itemid, @PathVariable Integer num, HttpServletRequest request) {
-
 		TbUser user = (TbUser) request.getAttribute("user");
 		Long uid = user.getId();
 		return carItemService.updateCarItemNumService(itemid, uid, num);
 	}
-
 	@RequestMapping("/cart/delete/{itemid}")
 	public String cartDelete(@PathVariable Long itemid, HttpServletRequest request) {
 		TbUser user = (TbUser) request.getAttribute("user");
@@ -52,7 +46,6 @@ public class CarItemController {
 		carItemService.deleteCarItemService(itemid, uid);
 		return "redirect:/cart/cart.html";
 	}
-
 	@RequestMapping("/delete/cart/all")
 	public String deleteCartAll(HttpServletRequest request) {
 		TbUser user = (TbUser) request.getAttribute("user");
@@ -60,5 +53,4 @@ public class CarItemController {
 		carItemService.deleteCarItemAllService(id);
 		return "redirect:/cart/cart.html";
 	}
-
 }

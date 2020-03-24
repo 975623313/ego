@@ -34,10 +34,8 @@ public class OrderController {
 		
 		 @RequestMapping("/order/cart")
 		 public String orderCart(HttpServletRequest request){
-			 System.out.println(request.toString()+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!+++++++++++++++++++++++++++"+request);
 			 //获得当前登录用户对象
 			 TbUser user=(TbUser) request.getAttribute("user");
-			 System.out.println(user.toString()+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!+++++++++++++++++++++++++++");
 			 Long id=user.getId();
 			 System.out.println("");
 			 Map<Long, CarItem> carMap = orderService.loadCarItemMapService(id);
@@ -45,7 +43,6 @@ public class OrderController {
 			 request.setAttribute("carMap",carMap);
 			 return "ordercart";
 		 }
-		 
 		 /****
 		  * 处理保存订单信息的请求
 		  */
@@ -54,16 +51,12 @@ public class OrderController {
 				 TbOrderShipping orderShipping,HttpServletRequest request){
 			 //获得当前登录用户对象
 			 TbUser user=(TbUser) request.getAttribute("user");
-			 
 			 Long id=user.getId();
-			 
 			 Map<String, String> map = orderService.saveOrderService(tbOrder, id, orderShipping);
 			 request.setAttribute("itemid",map.get("itemid"));
 			 request.setAttribute("total", map.get("total"));
 			 return "success";
-			 
 		 }
-		 
 		 /****
 		  * 处理加载用户订单列表的请求
 		  */
@@ -71,16 +64,11 @@ public class OrderController {
 		 public String orderList(HttpServletRequest request){
 			//获得当前登录用户对象
 			 TbUser user=(TbUser) request.getAttribute("user");
-			 
 			 Long id=user.getId();
-			 
 			 List<TbOrder> list = orderService.loadOrderListService(id);
-			 
 			 request.setAttribute("orderList", list);
-			 
 			 return "orders";
 		 }
-		 
 		 /****
 		  * 处理加载订单明细列表的请求
 		  */
@@ -88,9 +76,7 @@ public class OrderController {
 		 public String orderDetailList(@PathVariable String orderid,Model model){
 			 List<TbOrderItem> list = orderService.loadOrderItemListService(orderid);
 			 model.addAttribute("list", list);
-			 
 			 return "ordersdetail";
-			 
 		 }
 		 
 		

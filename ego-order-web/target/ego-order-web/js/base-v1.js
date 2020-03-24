@@ -2,10 +2,10 @@
  Date: 2014-01-21 
  */
 function login() {
-    return location.href = "http://sso.ego.com/page/login";
+    return location.href = "localhost:8083/page/login";
 }
 function regist() {
-    return location.href = "http://sso.ego.com/page/register";
+    return location.href = "localhost:8083/page/register";
 }
 function createCookie(a, b, c, d) {
     var d = d ? d : "/";

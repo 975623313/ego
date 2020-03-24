@@ -18,7 +18,6 @@ public class ItemController {
 
 	@Autowired
 	private ManagerItemService managerItemService;
-
 	/*
 	 * 处理商品信息分页查询请求
 	 */
@@ -30,14 +29,11 @@ public class ItemController {
 		return managerItemService.selectItemListService(page, rows);
 
 	}
-
 	@RequestMapping(value = "/item/reshelf", produces = MediaType.APPLICATION_JSON_VALUE + ";charset=UTF-8")
 	@ResponseBody
 	public EgoResult reshelfItem(Long[] ids) {
 		return managerItemService.reshelfItem(ids);
-
 	}
-
 	@RequestMapping(value = "/item/instock", produces = MediaType.APPLICATION_JSON_VALUE + ";charset=UTF-8")
 	@ResponseBody
 	public EgoResult instockItem(Long[] ids) {
@@ -47,14 +43,11 @@ public class ItemController {
 		}
 		return managerItemService.instockItem(ids);
 	}
-
 	@RequestMapping(value = "/item/delete", produces = MediaType.APPLICATION_JSON_VALUE + ";charset=UTF-8")
 	@ResponseBody
 	public EgoResult deleteItem(Long[] ids) {
-
 		return managerItemService.deleteItem(ids);
 	}
-
 	/*
 	 * 处理商品信息的发布请求
 	 * 
@@ -64,7 +57,6 @@ public class ItemController {
 	public EgoResult itenSave(TbItem item, String desc,String itemParams) {
 		return managerItemService.saveItemService(item, desc,itemParams);
 	}
-
 	@RequestMapping(value = "item/update", produces = MediaType.APPLICATION_JSON_VALUE + ";charset=UTF-8")
 	@ResponseBody
 	public EgoResult itemUpate(TbItem item, String desc) {

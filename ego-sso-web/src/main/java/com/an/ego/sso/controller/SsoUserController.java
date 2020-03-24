@@ -30,9 +30,7 @@ public class SsoUserController {
 	 */
 	@RequestMapping("/user/check/{param}/{type}")
 	@ResponseBody
-	public MappingJacksonValue userCheck(@PathVariable String param,
-			@PathVariable Integer type,@RequestParam(required=false)String callback){
-		
+	public MappingJacksonValue userCheck(@PathVariable String param, @PathVariable Integer type,@RequestParam(required=false)String callback){
 		  EgoResult result = ssoUserService.loadUserByCondService(param, type);
 		  MappingJacksonValue value=new MappingJacksonValue(result);
 		  //处理json响应数据格式
@@ -40,11 +38,8 @@ public class SsoUserController {
 			  value.setJsonpFunction(callback);
 			  //return value;
 		  }
-		   
 		  return value;
-		
 	}
-	
 	/****
 	 * 处理用户注册请求
 	 */
@@ -54,7 +49,6 @@ public class SsoUserController {
 		System.out.println(tbUser);
 		return ssoUserService.saveUserService(tbUser);
 	}
-	
 	/****
 	 * 处理用户登录请求
 	 */
@@ -64,7 +58,6 @@ public class SsoUserController {
 			HttpServletRequest request,HttpServletResponse response){
 		return ssoUserService.selectUser(username, password,request,response);
 	}
-	
 	/****
 	 * 处理获得用户登录状态的请求
 	 * @return
@@ -73,20 +66,14 @@ public class SsoUserController {
 	@ResponseBody
 	public MappingJacksonValue userToken(@PathVariable String token,
 			@RequestParam(required=false)String callback){
-		
 		  EgoResult result = ssoUserService.loadUserByToken(token);
-
 		  MappingJacksonValue value=new MappingJacksonValue(result);
 		  //处理json响应数据格式
-
 		  if(!StringUtils.isEmpty(callback)){
 			  value.setJsonpFunction(callback);
-
 			  //return value;
 		  }
-
 		  return value;
-		
 	}
 	
 	/****
@@ -97,18 +84,13 @@ public class SsoUserController {
 	@ResponseBody
 	public MappingJacksonValue userLogout(@PathVariable String token,
 			@RequestParam(required=false)String callback){
-		
 		  EgoResult result = ssoUserService.deleteUserByToken(token);
-		  
 		  MappingJacksonValue value=new MappingJacksonValue(result);
 		  //处理json响应数据格式
 		  if(!StringUtils.isEmpty(callback)){
 			  value.setJsonpFunction(callback);
 			  //return value;
 		  }
-		   
 		  return value;
-		
 	}
-	
 }

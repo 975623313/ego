@@ -35,6 +35,13 @@
 	         		<li data-options="attributes:{'url':'content'}">内容管理</li>
 	         	</ul>
          	</li>
+			<li>
+				<span>用户订单管理</span>
+				<ul>
+					<li data-options="attributes:{'url':'content-category'}">订单管理</li>
+					<li data-options="attributes:{'url':'content'}">用户管理管理</li>
+				</ul>
+			</li>
          </ul>
     </div>
     <div data-options="region:'center',title:''">

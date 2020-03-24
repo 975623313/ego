@@ -52,6 +52,7 @@ public class PortalContentServiceImpl implements PortalContentService {
 		//转为json字符串
 		String str = JsonUtils.objectToJson(biglist);
 		//将 str 保存到 redis 缓存
+		System.out.println("//将 str 保存到 redis 缓存"+str);
 		cluster.set(contentPictureKey, str);
 		cluster.expire(contentPictureKey, 86400);
 		return str;

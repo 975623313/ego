@@ -10,7 +10,7 @@
 			<a href="javascript:regist()">[免费注册]</a></li>
 			<li class="fore2 ld" clstag="homepage|keycount|home2013|01c">
 				<s></s>
-				<a href="http://jd2008.jd.com/JdHome/OrderList.aspx" rel="nofollow">我的订单</a>
+				<a href="http://localhost:8085/order/list.html" rel="nofollow">我的订单</a>
 			</li>
 			<li class="fore2-1 ld" id="jd-vip">
 				<s></s>

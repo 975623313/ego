@@ -47,9 +47,8 @@
 		data:"categoryId=89",
 		
 		success:function(ele){
-
+			
 			var data=JSON.parse(ele);
-
 			//alert(data.length);
 			len=data.length;
 			
@@ -68,10 +67,8 @@
 			for(var x=0;x<len;x++){
 				//获得一个广告信息的json对象
 				var first=data[x];
-
 				var TPL = ''
 				if(x==0){
-
 					TPL=TPL
 		            +'<li clstag="homepage|keycount|home2013|09a1" style="display:block" id="t'+(x+1)+'">'
 		            +'<a href="'+ first.href +'" target="_blank" title="'+ first.alt +'">'
@@ -79,7 +76,6 @@
 		            +'</a>'
 		            +'</li>';
 				}else{
-
 					TPL=TPL
 		            +'<li clstag="homepage|keycount|home2013|09a1" style="display:none" id="t'+(x+1)+'">'
 		            +'<a href="'+ first.href +'" target="_blank" title="'+ first.alt +'">'
@@ -89,7 +85,6 @@
 				}
 				
 			    //将tpl字符串添加到ul中
-
 			    ul.append(TPL);
 			    
 			    //divNum中添加广告图片编号
