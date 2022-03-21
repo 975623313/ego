@@ -39,7 +39,7 @@
 		<commons-fileupload.version>1.3.3</commons-fileupload.version>
 		<jedis.version>2.7.2</jedis.version>
 		<solrj.version>4.10.3</solrj.version>
-		<dubbo.version>2.5.3</dubbo.version>
+		<dubbo.version>2.6.9</dubbo.version>
 		<zkclient.version>0.10</zkclient.version>
 		<httpcomponents.version>4.4.1</httpcomponents.version>
 		<noggit.version>0.6</noggit.version>
